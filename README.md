@@ -1,5 +1,7 @@
 # NanoML Github Template
-[!Version](https://img.shields.io/static/v1?label=Version&message=0.0.1&color=blueviolet&style=for-the-badge)
+![Purdue](https://img.shields.io/badge/Purdue-University-cfb991?style=for-the-badge) 
+![Python](https://img.shields.io/badge/-Python-blue?logo=python&logoColor=white&style=for-the-badge)
+![Version](https://img.shields.io/static/v1?label=Version&message=0.0.1&color=blueviolet&style=for-the-badge)
 
 [https://github.com/NanoMetaML](https://github.com/NanoMetaML)
 
