@@ -19,7 +19,7 @@ Our goal is to make our code as easy to use as
 
     pip install our-package
 
-this isn't possible with proper version control for building the package.
+this isn't possible without proper version control for building the package.
 
 
 ## Why do we as academics care?
@@ -44,7 +44,7 @@ To get started with our NanoML Github Template, follow these steps:
 
 1. Clone the repository:
 
-        git clone https://github.com/nanoml/template.git
+        git clone https://github.com/nanometaml/template.git
 
 2. Change directory to the cloned repository:
 
@@ -66,7 +66,7 @@ Good question! If you type in `pip` into the cmd, it's not guaranteed to be link
 
 5. Install the package in editable mode:
 
-        pip install -e .
+        python -m pip install -e .
 
 Note: This means this package is now available on your local machine! Access it in your scripts for testing. 
 
@@ -75,6 +75,8 @@ Note: This means this package is now available on your local machine! Access it 
         cd test
         python test.py
         >>> Hello from the nanometaml team!
+        >>> <Clearml Output>
+        >>> Done!
 
 If you see this message, everything is working properly!
 
@@ -82,7 +84,7 @@ If you see this message, everything is working properly!
 
 ## Setup Clearml
 
-Go to [clear.ml](https:\\clear.ml) and setup an account. Then email Blake to get access to the NanoML workspace.  
+Go to [clear.ml](https:\\clear.ml) and setup an account. Then email Blake to get access to the NanoML workspace. You'll need to be invitied to the NanoML workspace and then use your credentials from the workspace when you run `clearml-init` for the first time.
 
 Now, you're ready to start developing your own NanoML projects using this template.
 
@@ -95,6 +97,10 @@ Now, you're ready to start developing your own NanoML projects using this templa
  3. Trainers
 
 The datasets contain all the data we need for an experiment. We pull in datasets from clearml and locally.
+
+Models are modularized into components and pytorch-lightning modules.
+
+Trainers control the training of the model. In these modules, you define checkpointing, logging, and running the experiment.
 
 All three of these components are loaded using modules.
 
@@ -112,18 +118,17 @@ Models are available on the official NanoMetaML github.
 
 ## Trainer
 
-Preconfigured pytorch-lightning trainers.
+Preconfigured pytorch-lightning trainers are available on the NanoMetaML github.
 
+### Optional
 
-## OPTIONAL
-
-Become a collaborator on the NanoMetaML organization.
+Become a collaborator on the NanoMetaML organization!!
 
 [https://github.com/NanoMetaML](https://github.com/NanoMetaML)
 
 # Contributing
 
-We welcome contributions from the community! If you would like to contribute to our projects, please follow these steps:
+We welcome contributions from the community! If you would like to contribute to our projects or start a collaboration with one of our gifted team members, please follow these steps:
 
 1. Fork the repository.
 
@@ -136,6 +141,7 @@ We welcome contributions from the community! If you would like to contribute to 
 5. Create a pull request against our repository, describing your changes and any relevant information.
 
 Our team will review your pull request and provide feedback or merge it if approved.
+
 # License
 
 All NanoML projects are released under the MIT License. This permissive license allows you to use, modify, and distribute our code, as long as you include the original copyright and license information.
