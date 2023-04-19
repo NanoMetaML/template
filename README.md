@@ -1,4 +1,5 @@
 # NanoML Github Template
+[!Version](https://img.shields.io/static/v1?label=Version&message=0.0.1&color=blueviolet&style=for-the-badge)
 
 [https://github.com/NanoMetaML](https://github.com/NanoMetaML)
 
