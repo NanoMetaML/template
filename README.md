@@ -5,7 +5,6 @@
 Template for all NanoML github repos. 
 
 
-
 We implement 3 good practices for managing our repos.
 
 1. Virtual environments
@@ -54,9 +53,9 @@ To get started with our NanoML Github Template, follow these steps:
 3. Create a virtual environment and activate it:
 
 
-        python -m venv venv
-        source venv/bin/activate  # For Linux/Mac
-        venv\Scripts\activate     # For Windows
+        python -m venv .venv
+        source .venv/bin/activate  # For Linux/Mac
+        .venv\Scripts\activate     # For Windows
 
 4. Install the required packages:
 
@@ -65,6 +64,10 @@ To get started with our NanoML Github Template, follow these steps:
 5. Install the package in editable mode:
 
         pip install -e .
+
+Note: This means this package is now available on your local machine! Access it in your scripts for testing. 
+
+
 
 ## Setup Clearml
 
