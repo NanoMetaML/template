@@ -59,13 +59,24 @@ To get started with our NanoML Github Template, follow these steps:
 
 4. Install the required packages:
 
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
+
+### Why python -m? 
+Good question! If you type in `pip` into the cmd, it's not guaranteed to be linked to the same python binary found on your cmd path. The only way to guarantee that the package is installed to the correct python, you have to run pip using python's module mode, i.e., 'python -m pip'.
 
 5. Install the package in editable mode:
 
         pip install -e .
 
 Note: This means this package is now available on your local machine! Access it in your scripts for testing. 
+
+6. Run test/test.py using the following
+
+        cd test
+        python test.py
+        >>> Hello from the nanometaml team!
+
+If you see this message, everything is working properly!
 
 
 
