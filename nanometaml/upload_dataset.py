@@ -12,7 +12,7 @@ from clearml import Dataset
 import numpy as np
 from pathlib import Path
 
-def upload_dataset(path, dataset_name, dataset_project):
+def upload_dataset(path, dataset_project, dataset_name):
     
     dataset = Dataset.create(
         dataset_name=dataset_name,

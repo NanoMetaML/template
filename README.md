@@ -19,34 +19,20 @@ Team Languages
 ![Rust](https://img.shields.io/badge/-Rust-cfb991?logo=rust&logoColor=white&style=for-the-badge)
 
 
-
-
-
-[https://github.com/NanoMetaML](https://github.com/NanoMetaML)
-
-Template for all NanoML github repos. 
-
-
-We implement 3 good practices for managing our repos.
+We implement 3 pretty standard systems for managing our repos.
 
 1. Virtual environments
-2. Git
-3. Setuptools
+2. Version Control
+3. Packaging
 
-To ensure our code is reusable within any environment, we setup all nanoml modules with a predefined setup tools.
-
-# Our goal
-
-Our goal is to make our code as easy to use as
+Our goal is to make our code as easy as
 
     pip install our-package
-
-this isn't possible without proper version control for building the package.
 
 
 ## Why do we as academics care?
 
-Academia should provide access to education with as few hurdles as possible. By setting up virtual environments, version control, and setuptools, we take several steps to making our research available to everyone.
+Academia's goal is to further humanity's knowledge and provide access to education with as few hurdles as possible. By making our code easy to use, we bring academia's goal closer to reality and open doors for anyone to come into science. Virtual environments, version control, and proper packaging make our code easily accessible and give access closer to anyone.
 
 ## Version Control
 
@@ -56,9 +42,9 @@ Git helps us track changes in our code, collaborate with other team members, and
 
 Virtual environments are essential for isolating project dependencies and avoiding conflicts between different Python packages. We use virtual environments to manage and install project-specific packages, ensuring a consistent and reproducible development environment for all contributors.
 
-## Setuptools
+## Packaging
 
-Setuptools is a widely used package management tool for Python. We use it to define, package, and distribute our code as reusable modules or libraries. This makes it easy for others to install and use our code without worrying about dependencies or compatibility issues.
+Packaging code is a widely used package management tool for Python. We use it to define, package, and distribute our code as reusable modules or libraries. This makes it easy for others to install and use our code without worrying about dependencies or compatibility issues.
 
 # Getting Started
 
@@ -92,17 +78,19 @@ Good question! If you type in `pip` into the cmd, it's not guaranteed to be link
 
 Note: This means this package is now available on your local machine! Access it in your scripts for testing. 
 
-6. Run test/test.py using the following
+6. Go into test/test.py and change the `my_name` variable to a string with your name.
+
+7. Run test/test.py using the following
 
         cd test
         python test.py
         >>> Hello from the nanometaml team!
+        >>> ...
         >>> <Clearml Output>
+        >>> ...
         >>> Done!
 
 If you see this message, everything is working properly!
-
-
 
 ## Setup Clearml
 
@@ -124,7 +112,7 @@ Models are modularized into components and pytorch-lightning modules.
 
 Trainers control the training of the model. In these modules, you define checkpointing, logging, and running the experiment.
 
-All three of these components are loaded using modules.
+All three of these components are loaded using nanomodules.
 
 ## NanoModules
 

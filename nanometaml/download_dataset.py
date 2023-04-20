@@ -11,12 +11,11 @@ from clearml import Dataset
 import numpy as np
 from pathlib import Path
 
-def download(dataset_project, dataset_name, files = None):
+def download(dataset_project, dataset_name, files):
     """Main function for template_download_dataset.py"""
-    if files is None:
-        files = ['train.npy', 'valid.npy']
     dataset = Dataset.get(dataset_project=dataset_project, dataset_name=dataset_name).get_local_copy()
     for file in files:
+        
         np.load(Path(dataset) / file)
         print('Downloaded dataset: {}'.format(Path(dataset) / file))
 
