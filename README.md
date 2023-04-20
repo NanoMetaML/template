@@ -1,7 +1,26 @@
-# NanoML Github Template
+<p align=center>
+<picture><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Purdue_Boilermakers_logo.svg/1200px-Purdue_Boilermakers_logo.svg.png" alt="Purdue Logo" width=200></picture>
+</p>
+<p style="font-size:40px;" align=center>
+NanoML Github Template 
+</p>
+
 ![Purdue](https://img.shields.io/badge/Purdue-University-cfb991?style=for-the-badge) 
-![Python](https://img.shields.io/badge/-Python-cfb991?logo=python&logoColor=white&style=for-the-badge)
 ![Version](https://img.shields.io/static/v1?label=Version&message=0.0.1&color=cfb991&style=for-the-badge)
+![License](https://img.shields.io/static/v1?label=License&message=MIT&color=cfb991&style=for-the-badge)
+
+<p style="font-size:30px;" align=center>
+Team Languages 
+</p>
+
+![Python](https://img.shields.io/badge/-Python-cfb991?logo=python&logoColor=white&style=for-the-badge)
+![Cpp](https://img.shields.io/badge/-C++-cfb991?logo=cplusplus&logoColor=white&style=for-the-badge)
+![C](https://img.shields.io/badge/-C-cfb991?logo=c&logoColor=white&style=for-the-badge)
+![Rust](https://img.shields.io/badge/-Rust-cfb991?logo=rust&logoColor=white&style=for-the-badge)
+
+
+
+
 
 [https://github.com/NanoMetaML](https://github.com/NanoMetaML)
 
