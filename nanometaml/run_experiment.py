@@ -1,14 +1,21 @@
 
 import hydra
 from omegaconf import DictConfig
-from nanomodules import load_module_endpoint
+import nanomodules
+
+
 from clearml import Task
+import torch
+
+torch.set_float32_matmul_precision("medium")
 
 def run_experiment(cfg: DictConfig) -> None:
     "Running experiment"
 
     task = Task.init(project_name=cfg.project_name, task_name=cfg.task_name)
-    trainer = load_module_endpoint(cfg.trainer)
-    dataset = load_module_endpoint(cfg.dataset)
-    model = load_module_endpoint(cfg.model)
+
+    trainer = nanomodules.loadModuleFromConfig(cfg.trainer)
+    dataset = nanomodules.loadModuleFromConfig(cfg.dataset)
+    model = nanomodules.loadModuleFromConfig(cfg.model)
+
     trainer.fit(model, dataset["train"], dataset["valid"])
