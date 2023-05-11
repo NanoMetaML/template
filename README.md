@@ -46,6 +46,10 @@ Virtual environments are essential for isolating project dependencies and avoidi
 
 Packaging code is a widely used package management tool for Python. We use it to define, package, and distribute our code as reusable modules or libraries. This makes it easy for others to install and use our code without worrying about dependencies or compatibility issues.
 
+# Before we get started...
+
+Make sure that you have your ClearML credentials configured at [clear.ml](https:\\clear.ml). You will need these to establish connections with the ClearML servers. This will be elaborated more in the following steps. 
+
 # Getting Started
 
 To get started with our NanoML Github Template, follow these steps:
@@ -72,15 +76,36 @@ To get started with our NanoML Github Template, follow these steps:
 ### Why python -m? 
 Good question! If you type in `pip` into the cmd, it's not guaranteed to be linked to the same python binary found on your cmd path. The only way to guarantee that the package is installed to the correct python, you have to run pip using python's module mode, i.e., 'python -m pip'.
 
-5. Install the package in editable mode:
+5. Configure ClearML using the following command:
+
+        clearml-init
+
+This command will initialize the ClearML setup wizard for the server. After this command is run, your terminal should stall at `Paste copied configuration here:`. Now, in your ClearML profile, go to Settings >> Workspace >> App Credentials, and click "Create New Credentials". Your credentials should look like this:
+
+```
+api { 
+    # Vea Iyer's workspace
+    web_server: https://app.clear.ml
+    api_server: https://api.clear.ml
+    files_server: https://files.clear.ml
+    credentials {
+        "access_key" = "XXXxxx"
+        "secret_key"  = "XXXxxx"
+    }
+}
+```
+
+Paste the API information in your terminal. If everything works, you should get a confirmation message. Now, your ClearML server should be ready to go!
+
+6. Install the package in editable mode:
 
         python -m pip install -e .
 
 Note: This means this package is now available on your local machine! Access it in your scripts for testing. 
 
-6. Go into test/test.py and change the `my_name` variable to a string with your name.
+7. Go into test/test.py and change the `my_name` variable to a string with your name.
 
-7. Run test/test.py using the following
+8. Run test/test.py using the following
 
         cd test
         python test.py
