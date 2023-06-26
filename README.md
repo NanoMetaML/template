@@ -119,9 +119,17 @@ If you see this message, everything is working properly!
 
 ## Setup Clearml
 
-Go to [clear.ml](https:\\clear.ml) and setup an account. Then email Blake to get access to the NanoML workspace. You'll need to be invitied to the NanoML workspace and then use your credentials from the workspace when you run `clearml-init` for the first time.
+Go to [clear.ml](https:\\clear.ml) and setup an account. Then email Blake to get access to the NanoML workspace. You'll need to be invited to the NanoML workspace and then use your credentials from the workspace when you run `clearml-init` for the first time.
 
 Now, you're ready to start developing your own NanoML projects using this template.
+
+## Using ClearML
+
+The easiest way to run a clearml script is to run the following in a git repo:
+
+    `clearml-task --name <Task name> --project <project name> --script <entrance script> --queue default`
+
+Note, you need to prepare the script by adding a Task init method from the clearml package and have a requirements.txt file for the environment to be preapred properly in the claerml agent.
 
 # Workflow
 
